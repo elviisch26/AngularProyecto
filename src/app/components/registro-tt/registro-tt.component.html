@@ -1,0 +1,42 @@
+<body>
+    <div *ngIf="!loading" class="formulario">
+        <header>
+            <h1>Registro y control de trabajos de Titulación</h1>
+            <a routerLink="/principal">Volver</a>
+        </header>
+        <div class="campos">
+            <span *ngIf="enviar && registrartt.invalid" class="msj">TODO LOS CAMPOS SON OBLIGATORIOS</span>
+            <form [formGroup]="registrartt" (ngSubmit)="agregarRegistro()">
+                <div class="registro">
+                    <input type="text" placeholder="Nombre" class="use" formControlName="nombre">
+                </div>
+                <div class="registro">
+                    <input type="text" placeholder="Apellido" class="use" formControlName="apellido">
+                </div>
+                <div class="registro">
+                    <input type="number" placeholder="Número de Cédula" class="use" formControlName="cedula">
+                </div>
+                <div class="registro">
+                    <input type="text" placeholder="Universidad" class="use" formControlName="uni">
+                </div>
+                <div class="registro">
+                    <input type="text" placeholder="Facultad" class="use" formControlName="facu">
+                </div>
+                <div class="registro">
+                    <input type="text" placeholder="Carrera" class="use" formControlName="carre">
+                </div>
+                <div class="registro">
+                    <input type="text" placeholder="Tema" class="use" formControlName="tema">
+                </div>
+                <div class="registro">
+                    <input type="text" placeholder="Tutor" class="use" formControlName="tutor">
+                </div>
+                <div class="registro">
+                    <input type="text" placeholder="Tipo de investigación" class="use" formControlName="tipo">
+                </div>
+                <button type="submit" class="btn-reg"> Registrarse</button>
+            </form>
+        </div>
+    </div>
+    <app-spiner *ngIf="loading"></app-spiner>
+</body>

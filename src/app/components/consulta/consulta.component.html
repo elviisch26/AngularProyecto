@@ -1,0 +1,39 @@
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">Registro y control de trabajos de titulación</p>
+            <nav>
+                <a routerLink="/principal">Inicio</a>
+                <a routerLink="/registro-trabajos">Registro</a>
+                <a routerLink="/control">Control</a>
+            </nav>
+        </div>
+    </header>
+    <div class="buscar">
+        <input type="text" placeholder="Buscar" required />
+        <div class="btn">
+            <i class="fas fa-search icon"></i>
+        </div>
+    </div>
+    <div>
+        <h2 class="ctl">Control de Trabajos Registrados</h2>
+        <div class="inicio" *ngFor="let registrott of registros">
+            <li><strong>Nombres:</strong> {{ registrott.nombre}}</li>
+            <li><strong>Apellidos:</strong> {{ registrott.apellido}}</li>
+            <li><strong>Número de Cédula:</strong> {{ registrott.cedula}}</li>
+            <li><strong>Universidad:</strong>{{ registrott.uni}}</li>
+            <li><strong>Facultad:</strong>{{ registrott.facu}} </li>
+            <li><strong>Carrera:</strong> {{ registrott.carre}}</li>
+            <li><strong>Tema:</strong> {{ registrott.tema}}</li>
+            <li><strong>Tutor:</strong>{{ registrott.tutor}} </li>
+            <li><strong>Tipo de investigación:</strong> {{ registrott.tipo}}</li>
+            <button [routerLink]="['/imprimir/', registrott.id]">Imprimir</button>
+        </div>
+
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; Registro y Control de trabajos de titulación 2022</p>
+        </div>
+    </footer>
+</body>

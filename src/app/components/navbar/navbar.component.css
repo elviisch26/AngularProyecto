@@ -1,0 +1,52 @@
+header {
+    background-color: rgb(245, 245, 245);
+
+}
+
+header .logo {
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(199, 27, 64);
+    font-size: 1.6em;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover {
+    color: rgb(199, 27, 64);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+header .container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header nav {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+}
